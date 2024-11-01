@@ -1,0 +1,1 @@
+{"name":"Local: perser_first","url":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\perser_first.c","tests":[{"id":1719229336185,"input":"S=Bb\nS=Cd\nB=aB\nB=b\nC=CC\nC=c","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\perser_first.c","group":"local","local":true}

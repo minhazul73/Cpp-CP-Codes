@@ -1,0 +1,1 @@
+{"name":"Local: follow","url":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\follow.cpp","tests":[{"id":1719242188483,"input":"6\nS=BC\nS=Cd\nB=aB\nB=e\nC=cC\nD=$\n\nS\n1\n\nB\n1\n\nC\n2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\follow.cpp","group":"local","local":true}

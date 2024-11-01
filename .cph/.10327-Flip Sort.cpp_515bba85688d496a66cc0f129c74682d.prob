@@ -1,0 +1,1 @@
+{"name":"Local: 10327-Flip Sort","url":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\10327-Flip Sort.cpp","tests":[{"id":1730356247848,"input":"3\n1 2 3\n3\n2 3 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\10327-Flip Sort.cpp","group":"local","local":true}

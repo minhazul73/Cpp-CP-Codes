@@ -1,0 +1,1 @@
+{"name":"Local: symbol_table","url":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\symbol_table.cpp","tests":[{"id":1719290704282,"input":"a+b=c$\na","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\minha\\OneDrive\\Documents\\VS codes\\C++\\symbol_table.cpp","group":"local","local":true}
