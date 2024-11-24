@@ -4,6 +4,9 @@ using namespace std;
 #define rep(s, n) for(int i = s; i < n; i++)
 #define rrep(e, n) for(int i = n - 1; i >= e; i--)
 #define vi vector<int>
+#define vvi vector<<vector<int>>
+#define mpii map<int, int>
+#define mpis map<int, string>
 #define pb push_back
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
@@ -13,39 +16,47 @@ using namespace std;
 #define NO cout << "NO" << endl;
 #define nl endl
 #define ll long long int
+#define speed ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define testcase int t; cin >> t; while(t--)
 
 int main()
 {
+    speed
     testcase
     {
         int n; cin >> n;
-        vi v(n);
-        rep(0, n) cin >> v[i];
+        mpii mp;
+        rep(0, n)
+        {
+            int x; cin >> x;
+            mp[x]++;
+        }
 
-        int k = n - 2;
-        vector<pair<int, int>> divisors;
-        for(int i = 1; i * i <= k; i++)
-            if(k % i == 0) divisors.pb({i, k / i});
-
-        pair<int, int> ans;
-        for (auto &div : divisors) {
-            int a = div.first;
-            int b = div.second;
-            bool found_a = false, found_b = false;
-            int found_i;
-            for (int i = 0; i < v.size(); i++) {
-                if(!found_a)
-                    if (v[i] == a) {found_a = true; found_i = i;} 
-                if (v[i] == b && i != found_i) found_b = true;
-                if (found_a && found_b) {
-                    ans = {a, b};
-                    break;
+        int items = n - 2;
+        for(int i = 1; i * i <= items; i++)
+        {
+            if(items % i == 0)
+            {
+                int a = i;
+                int b = items / i;
+                if(a == b)
+                {
+                    if(mp[a] >= 2)
+                    {
+                        cout << a << " " << b << endl;
+                        break;
+                    }
+                }
+                else 
+                {
+                    if(mp[a] > 0 && mp[b] > 0)
+                    {
+                        cout << a << " " << b << endl;
+                        break;
+                    }
                 }
             }
         }
-
-        cout << ans.first << " " << ans.second << endl;
     }    
 }
 
