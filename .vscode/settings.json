@@ -3,7 +3,9 @@
         "iostream": "cpp",
         "deque": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp"
     },
     "cph.general.onceMaintainerMessage": false,
     "C_Cpp.errorSquiggles": "disabled"
