@@ -22,12 +22,24 @@ using namespace std;
 int main()
 {
     speed
-    testcase
-    {
-        string s; cin >> s;
-        transform(s.begin(), s.end(), s.begin(), ::tolower);
-        if(s == "yes") cout << "YES" << endl;
-        else cout << "NO" << endl;
-    }    
-}
+    int n; cin >> n;
+    vi a(n), b(n), c(n); 
+    rep(0, n) cin >> a[i];
+    rep(0, n) cin >> b[i];
+    rep(0, n) cin >> c[i];
+    ll total_score = 0;
 
+    rep(0, n)
+    {
+        int t, s;
+        cin >> t >> s;
+
+        if (s > 0) 
+        {
+            int score = max(c[i], a[i] - b[i] * t - 50 * (s - 1));
+            total_score += score;
+        }
+        else total_score += 0;
+    }
+    cout << total_score << nl;
+}

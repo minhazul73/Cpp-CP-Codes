@@ -3,7 +3,9 @@ using namespace std;
 
 #define rep(s, n) for(int i = s; i < n; i++)
 #define rrep(e, n) for(int i = n - 1; i >= e; i--)
+#define ll long long int
 #define vi vector<int>
+#define vll vector<ll>
 #define vvi vector<vector<int>>
 #define mpii map<int, int>
 #define mpis map<int, string>
@@ -15,19 +17,22 @@ using namespace std;
 #define YES cout << "YES" << endl;
 #define NO cout << "NO" << endl;
 #define nl endl
-#define ll long long int
 #define speed ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define testcase int t; cin >> t; while(t--)
 
 int main()
 {
     speed
-    testcase
+    // testcase
     {
         string s; cin >> s;
-        transform(s.begin(), s.end(), s.begin(), ::tolower);
-        if(s == "yes") cout << "YES" << endl;
-        else cout << "NO" << endl;
-    }    
+        int start = 0, count = 0, decimal = 0;
+        
+        while (start < s.size() && s[start] == '0') start++;
+        rep(start, s.size()) {
+            if (isdigit(s[i])) count++;
+            if (s[i] == '.') decimal = 1;
+        }
+        cout << count - decimal << nl;
+    }
 }
-

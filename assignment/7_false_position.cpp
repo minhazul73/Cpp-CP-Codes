@@ -3,7 +3,9 @@ using namespace std;
 
 #define rep(s, n) for(int i = s; i < n; i++)
 #define rrep(e, n) for(int i = n - 1; i >= e; i--)
+#define ll long long int
 #define vi vector<int>
+#define vll vector<ll>
 #define vvi vector<vector<int>>
 #define mpii map<int, int>
 #define mpis map<int, string>
@@ -15,19 +17,31 @@ using namespace std;
 #define YES cout << "YES" << endl;
 #define NO cout << "NO" << endl;
 #define nl endl
-#define ll long long int
 #define speed ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define testcase int t; cin >> t; while(t--)
+
+double f(double x) {
+    return pow(x, 3) - x + 2;
+}
+
+double false_position(double a, double b, double eps) {
+    double c;
+    while (abs(b - a) >= eps) {
+        c = (a * f(b) - b * f(a)) / (f(b) - f(a));
+        if (f(c) == 0.0) break;
+        else if (f(c) * f(a) < 0) b = c;
+        else a = c;
+    }
+    return c;
+}
 
 int main()
 {
     speed
-    testcase
+    // testcase
     {
-        string s; cin >> s;
-        transform(s.begin(), s.end(), s.begin(), ::tolower);
-        if(s == "yes") cout << "YES" << endl;
-        else cout << "NO" << endl;
-    }    
+        double eps = 0.001;
+        double a = -3, b = -1;
+        cout << fixed << setprecision(3) << false_position(a, b, eps) << nl;
+    }
 }
-
